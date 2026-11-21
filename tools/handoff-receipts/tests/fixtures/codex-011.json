@@ -1,0 +1,247 @@
+{
+  "attempt": "c4df3ceafebc405891191abaa6c39111",
+  "source": {
+    "attempt_id": "c4df3ceafebc405891191abaa6c39111",
+    "bundle_version": 1,
+    "captured_at": "2026-11-01T09:43:21.741629+00:00",
+    "group": "c4df3ceafebc405891191abaa6c39111",
+    "interpretation_version": 2,
+    "mtime_ns": 1793526201740397848,
+    "name": null,
+    "path": "/synthetic/hr2/instruction.txt",
+    "retry_of": null,
+    "sha256": "cad0ccf0fd121b553ae8760da5d0519e64ad39e5db4791c0b8120f80239e62be",
+    "size": 32
+  },
+  "request": {
+    "argv": [
+      "/synthetic/package/tests/fake_exec.py",
+      "exec",
+      "-C",
+      "/synthetic/hr2",
+      "--json",
+      "--skip-git-repo-check",
+      "-"
+    ],
+    "cwd": "/synthetic/hr2",
+    "effort": null,
+    "known_paths": [],
+    "model": null,
+    "native_path": null,
+    "observation_timeout": 0.0,
+    "output": null,
+    "preflight": null,
+    "session_root": "/synthetic/hr2/sessions",
+    "socket": null,
+    "thread_id": null,
+    "via": "exec"
+  },
+  "state": {
+    "control": [
+      {
+        "at": "2026-11-01T09:43:21.741629+00:00",
+        "event": "intent_recorded"
+      },
+      {
+        "at": "2026-11-01T09:43:21.816233+00:00",
+        "event": "dispatch_started"
+      },
+      {
+        "at": "2026-11-01T09:43:21.832956+00:00",
+        "event": "process_started",
+        "pid": 314215
+      },
+      {
+        "at": "2026-11-01T09:43:21.863951+00:00",
+        "event": "stream_thread",
+        "thread_id": "5fa75944-b121-4f16-951d-b400c23fc45c"
+      },
+      {
+        "at": "2026-11-01T09:43:21.896385+00:00",
+        "event": "stream_turn_started",
+        "turn_id": "5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0"
+      },
+      {
+        "at": "2026-11-01T09:43:21.918460+00:00",
+        "event": "stream_final_message",
+        "sha256": "a2f1a6d79bfb0fe6d2fe2f0f08c2f32ce53cc935520e9d8a9f8daa051b4f239b",
+        "text": "ACK"
+      },
+      {
+        "at": "2026-11-01T09:43:21.934286+00:00",
+        "event": "stream_turn_completed"
+      },
+      {
+        "at": "2026-11-01T09:43:21.950171+00:00",
+        "event": "process_exited",
+        "exit_code": 0
+      }
+    ],
+    "target": {
+      "diagnostics": [],
+      "issues": [],
+      "native_path": "/synthetic/hr2/sessions/rollout-5fa75944-b121-4f16-951d-b400c23fc45c.jsonl",
+      "observation_attempts": [
+        {
+          "at": "2026-11-01T09:43:21.968312+00:00",
+          "codes": []
+        }
+      ],
+      "observation_timeout": 0.0,
+      "observation_version": 2,
+      "segments": [
+        {
+          "completed_at": "2026-11-01T09:43:21.899720+00:00",
+          "copy_sha256": "5d17012cb46aad8bac383b0448918842e0a206b335264c25afe07ca5c9c0aab5",
+          "copy_text": "{\"timestamp\": \"2026-11-01T09:43:21.863716+00:00\", \"type\": \"event_msg\", \"payload\": {\"type\": \"task_started\", \"turn_id\": \"5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0\"}}\n{\"timestamp\": \"2026-11-01T09:43:21.885390+00:00\", \"type\": \"response_item\", \"payload\": {\"type\": \"message\", \"role\": \"user\", \"content\": [{\"type\": \"input_text\", \"text\": \"HR2 synthetic regression input.\\n\"}]}}\n{\"timestamp\": \"2026-11-01T09:43:21.892690+00:00\", \"type\": \"response_item\", \"payload\": {\"type\": \"message\", \"role\": \"assistant\", \"phase\": \"final_answer\", \"content\": [{\"type\": \"output_text\", \"text\": \"ACK\"}]}}\n{\"timestamp\": \"2026-11-01T09:43:21.899720+00:00\", \"type\": \"event_msg\", \"payload\": {\"type\": \"task_complete\", \"turn_id\": \"5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0\", \"last_agent_message\": \"ACK\"}}\n",
+          "end": 1418,
+          "final_output_sha256": "a2f1a6d79bfb0fe6d2fe2f0f08c2f32ce53cc935520e9d8a9f8daa051b4f239b",
+          "format": "selected-lines-v2",
+          "lines": [
+            {
+              "copy_end": 159,
+              "copy_start": 0,
+              "end": 439,
+              "roles": [
+                "start"
+              ],
+              "sha256": "3c90b3aba020913b4cf509bc758909aad824723985f21d3e94c1043f5ff089d1",
+              "start": 280
+            },
+            {
+              "copy_end": 364,
+              "copy_start": 159,
+              "end": 1023,
+              "roles": [
+                "input"
+              ],
+              "sha256": "702cbce28569925bfcd9d3be66e56c770136ce6e2a14b025de69deab824b3fce",
+              "start": 818
+            },
+            {
+              "copy_end": 570,
+              "copy_start": 364,
+              "end": 1229,
+              "roles": [
+                "final_output"
+              ],
+              "sha256": "946257a2701833eb6d7adb1e21dd5b9b8dd160631a27fc44bbe07f7d16b79fe7",
+              "start": 1023
+            },
+            {
+              "copy_end": 759,
+              "copy_start": 570,
+              "end": 1418,
+              "roles": [
+                "terminal",
+                "final_output"
+              ],
+              "sha256": "3f71e78973f2f6a6322461688a36095bc2472878ff102524f62d8bb5e5625d5c",
+              "start": 1229
+            }
+          ],
+          "matches": true,
+          "observed_at": "2026-11-01T09:43:21.967831+00:00",
+          "omitted": [
+            {
+              "end": 582,
+              "reason": "sensitive",
+              "roles": [],
+              "sha256": "906ba7e78a3ea8112b733dd456c812391df15d3cfb70fb47c3418c5415afed94",
+              "start": 439
+            },
+            {
+              "end": 818,
+              "reason": "sensitive",
+              "roles": [],
+              "sha256": "c72f153b763d482f643c8ee1327c761ecb5cb1738e61d662236c17a4b5ac7ca6",
+              "start": 582
+            }
+          ],
+          "path": "/synthetic/hr2/sessions/rollout-5fa75944-b121-4f16-951d-b400c23fc45c.jsonl",
+          "range_sha256": "3f473c8781f891b7ebd7716c731120195458a1f4ead775373c9e9d4742969772",
+          "snapshot_sha256": "dbe6501039e24a5bc0f8a33af3de3c63e0eca8a86777f5ecddf16f5711e4052a",
+          "start": 280,
+          "started": true,
+          "terminal": "completed",
+          "turn_id": "5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0"
+        }
+      ],
+      "thread_id": "5fa75944-b121-4f16-951d-b400c23fc45c",
+      "turn_id": "5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0"
+    }
+  },
+  "body": "HR2 synthetic regression input.\n",
+  "interpretation": "# E interpretation v2 — handoff-receipts 0.1.1\n\nThis product profile inherits the prototype's selected-lines-v2 interpretation.\nBundle version 1 describes packaging, independently of interpretation version 2.\n\nThe five logical E components are source pointer (`source.json`), exact instruction\n(`body.txt`), pre-dispatch request (`request.json`), control observations\n(checkpoint `state.control`), and target observations (`state.target`). The source\nincludes the instruction path, byte length, SHA-256, mtime, attempt ID, timestamp,\nand explicit retry link/group. A path is a pointer, not proof of current content.\n\nOnly task_started, the exact user message, terminal events (task_complete,\ntask_failed, turn_aborted), and final-output decision lines are copied. Every\nselected line has its original [start,end) byte range, SHA-256, role labels and\ncopy offsets. Other lines, including sensitive necessary lines, appear only as\nrange/hash/role/reason entries in `omitted`. The span and snapshot retain hashes;\nthe selective copy has a separate hash. Copy bytes are UTF-8 in `copy_text`.\nNo account/session metadata body is copied. Preflight records length/hash only;\nsubsequent capture checks that this original prefix still matches.\nContext compaction is not a lifecycle boundary. Exact start/input binding survives\na `compacted` row, whose contents remain omitted, until the next task start or the\nattributable terminal. A terminal with a different explicit turn ID is not attached.\nA partial trailing native line is outside the observation. Rollouts over 32 MiB\nare unsupported and yield unknown observation rather than truncated evidence.\n\nFacts are rederived from retained bytes, not trusted summary flags. Omitting a\nrequired line makes its dependent fact unknown. Exact user input after the\nidentified start establishes target input confirmation. Terminal events refer\nto that exact turn, or are within its explicit start boundary. In Codex 0.163.0,\na task_complete with non-null error is a failed turn, not successful completion. A matching daemon\nturn-list ID also establishes its reported terminal state independently of input\nconfirmation. Process exit and stream completion without an exact turn ID do not\nestablish native turn completion. No fact proves model exposure or semantic use.\n\nThe 0.1.1 derived view adds per-fact assessment levels. Local/native observations\ntake precedence over exec stream reports. A uniquely bound stream thread and one\nturn start/terminal may supply `reported` lifecycle facts independently of native\nobservation. Conflicting IDs or multiple lifecycle candidates cannot supply a\ncompleted report. Missing exact turn IDs and native completion timestamps remain\nunknown. Safe `item.completed` agent-message text/digest is allowlisted into control\nhistory; the last eligible message before successful stream completion may supply\nreported final output. A later sensitive/oversized candidate invalidates an earlier\nmessage candidate. Output events record assessment and source. These additions do\nnot change selected-lines-v2 bytes or the observed input requirements for R2/R3.\nExisting bundle interpretation files remain immutable; current derived views can\nexpose legacy control reports without rewriting them.\n\nAttempts, process starts, target inputs, turn starts and turn outcomes are\nindependent. A saved intent is not an attempted send. New bundles record\n`intent_recorded`; legacy initial `attempted` events are also interpreted only as\nintent. `attempted=true` means dispatch crossed a write-ahead boundary at which\nthe request may have reached the server: a logged daemon turn/start, or an exec\nlaunch boundary not followed by a known launch failure. `dispatched=true` means\nturn/start was about to be sent or a native process was created; this does not\nprove server receipt. An exec crash between the launch boundary and process-start\nrecord yields attempted=true, dispatched=unknown. Preflight refusal, unsent intent\nand known launch failure yield attempted=false, dispatched=false. A recorded\n`dispatch_rejected.reason` explains refusal. Legacy generic errors cannot reveal\na more specific reason. Capture/recover never attaches native turns to unsent\nintent. Other missing observations remain unknown. An explicit retry\nmust preserve exact instruction bytes. Duplicate execution requires two distinct\nconfirmed (thread, turn) pairs. Its absence requires all grouped attempts resolved.\nThe effective attempt is the earliest observed completion only when all grouped\nattempts are either known unsent or confirmed and terminal, all completion times exist and the first is\nunique. No completed attempt in a fully resolved group gives null; uncertainty\nor a tie gives unknown. This rule does not identify a semantic business effect.\n\nThe initial manifest seals source/request/body/this interpretation before dispatch.\nThe complete initial bundle and checkpoint are written and fsynced under a hidden\n`.pending-*` staging directory, then renamed to the final ID in one operation and\nthe store directory is fsynced. A crash before publication leaves no visible ID.\nAbandoned hidden staging directories are ignored by queries.\nImmutable checkpoints are named by SHA-256 and reference the previous checkpoint.\nAn atomically replaced CURRENT selects the durable head. All checkpoints and the\nhead chain are checked. Fully written orphan checkpoints after a crash are checked\nbut do not supply facts. Incomplete `.writing-*` files never supply facts. Hashes\ndetect changes relative to stored commitments; they are not signatures and cannot\nprevent an attacker replacing data together with all commitments. Omitted bytes\nand full native snapshots cannot be reconstructed or independently rehashed.\n\ninspect/list/dup/which/verify/export use only bundle files. Query scans skip corrupt\nbundles with a categorized stderr warning. Duplicate assessments remain unknown\nfor absence/effective-attempt claims when skipped evidence could matter; positive\nobserved duplicates remain reportable. Verify/export stay strict. Forget can delete\na corrupt bundle without loading it, while retaining the active-writer lock guard.\nFresh idle daemon threads without a rollout use a zero-byte preflight only if\nthere are no prior turns (including a not-materialized turn list). Other read\nerrors or a missing rollout with prior turns cause pre-dispatch refusal. The\nrollout path is refreshed after dispatch. notLoaded is refused without loading or\ntransferring a thread. `recover` explicitly\nreads the recorded native location (or a uniquely matching newly created rollout)\nand appends a checkpoint. It never resends or interrupts work. Concurrent active\ncapture/recovery is rejected by a per-attempt advisory lock. An absent exit event\nstays unknown even if later native completion is recovered. Without an observed\nstream thread ID, recovery excludes pre-existing paths and requires an exact body,\na matching working directory and exactly one new candidate. Ambiguity stays unknown.\n\nCapture and recovery retry transient native-read absence/incompleteness for a\nbounded interval (default 2 seconds; configurable 0..30). They record safe fixed\ndiagnostic code/description pairs and per-read timestamps/codes. Privacy failures,\nprefix changes, ambiguity and other permanent errors stop retries. No dispatch is\nretried. Successful prior observations survive a later failed reread, whose issues\ndescribe the latest attempt. Recovery may use an explicit final-output destination\noverride without altering the immutable request. Ordinary offline queries neither\nreread nor retroactively diagnose missing native sources.\n",
+  "expected": {
+    "attempt_id": "c4df3ceafebc405891191abaa6c39111",
+    "name": null,
+    "group": "c4df3ceafebc405891191abaa6c39111",
+    "retry_of": null,
+    "instruction_sha256": "cad0ccf0fd121b553ae8760da5d0519e64ad39e5db4791c0b8120f80239e62be",
+    "source_path": "/synthetic/hr2/instruction.txt",
+    "created_at": "2026-11-01T09:43:21.741629+00:00",
+    "via": "exec",
+    "thread_id": "5fa75944-b121-4f16-951d-b400c23fc45c",
+    "turn_id": "5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0",
+    "facts": {
+      "attempted": true,
+      "dispatched": true,
+      "process_started": true,
+      "process_exit_code": 0,
+      "target_input_confirmed": true,
+      "turn_started": true,
+      "turn_status": "completed",
+      "completed_at": "2026-11-01T09:43:21.899720+00:00",
+      "final_output_sha256": "a2f1a6d79bfb0fe6d2fe2f0f08c2f32ce53cc935520e9d8a9f8daa051b4f239b",
+      "model_read_or_used": "unknown"
+    },
+    "fact_levels": {
+      "attempted": "observed",
+      "dispatched": "observed",
+      "process_started": "observed",
+      "process_exit_code": "observed",
+      "target_input_confirmed": "observed",
+      "turn_started": "observed",
+      "turn_status": "observed",
+      "completed_at": "observed",
+      "final_output_sha256": "observed",
+      "model_read_or_used": "unknown"
+    },
+    "observed_facts": {
+      "attempted": true,
+      "dispatched": true,
+      "process_started": true,
+      "process_exit_code": 0,
+      "target_input_confirmed": true,
+      "turn_started": true,
+      "turn_status": "completed",
+      "completed_at": "2026-11-01T09:43:21.899720+00:00",
+      "final_output_sha256": "a2f1a6d79bfb0fe6d2fe2f0f08c2f32ce53cc935520e9d8a9f8daa051b4f239b",
+      "model_read_or_used": "unknown"
+    },
+    "reported": {
+      "thread_id": "5fa75944-b121-4f16-951d-b400c23fc45c",
+      "turn_id": "5e3b8bc6-9ced-4bb4-a7c0-04b2f898c2b0",
+      "turn_started": true,
+      "turn_status": "completed",
+      "final_output_sha256": "a2f1a6d79bfb0fe6d2fe2f0f08c2f32ce53cc935520e9d8a9f8daa051b4f239b",
+      "reported_at": "2026-11-01T09:43:21.934286+00:00"
+    },
+    "identity_levels": {
+      "thread_id": "observed",
+      "turn_id": "observed"
+    },
+    "output": null,
+    "rejection_reason": null,
+    "issues": [],
+    "observation_issues": [],
+    "observation_attempts": [
+      {
+        "at": "2026-11-01T09:43:21.968312+00:00",
+        "codes": []
+      }
+    ],
+    "assessment": "observed"
+  }
+}

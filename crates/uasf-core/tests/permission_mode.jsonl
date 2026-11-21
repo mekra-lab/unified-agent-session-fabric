@@ -1,0 +1,4 @@
+{"type":"permission-mode","permissionMode":"plan","sessionId":"synthetic-permission-session"}
+{"type":"user","uuid":"synthetic-user","parentUuid":null,"sessionId":"synthetic-permission-session","message":{"role":"user","content":"Synthetic metadata observation."}}
+{"type":"permission-mode","permissionMode":"default","sessionId":"synthetic-permission-session"}
+{"type":"assistant","uuid":"synthetic-assistant","parentUuid":"synthetic-user","sessionId":"synthetic-permission-session","message":{"role":"assistant","content":"Synthetic reply."}}

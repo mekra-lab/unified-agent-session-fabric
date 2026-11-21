@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+auth.json
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pem
+*.key
+node_modules/
+dist/
+__pycache__/
+runtime/
+private-data/
+.DS_Store
+target/

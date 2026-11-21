@@ -1,0 +1,11 @@
+[package]
+name = "uasf-staging"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+uasf-core = { path = "../uasf-core" }
+uasf-json = { path = "../uasf-json" }
+libc = "=0.2.191"

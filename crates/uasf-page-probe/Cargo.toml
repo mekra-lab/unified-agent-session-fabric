@@ -1,0 +1,16 @@
+[package]
+name = "uasf-page-probe"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+uasf-index-probe = { path = "../uasf-index-probe" }
+uasf-core = { path = "../uasf-core" }
+uasf-json = { path = "../uasf-json" }
+rusqlite = { version = "=0.40.2", features = ["bundled"] }
+sha2 = "=0.10.9"
+hmac = "=0.12.1"
+base64 = "=0.22.1"
+libc = "=0.2.191"

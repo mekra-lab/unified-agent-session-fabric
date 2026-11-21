@@ -1,0 +1,13 @@
+[package]
+name = "uasf-queue"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+uasf-json = { path = "../uasf-json" }
+serde = { version = "=1.0.229", features = ["derive"] }
+sha2 = "=0.10.9"
+libc = "=0.2.191"
+rusqlite = { version = "=0.40.2", features = ["bundled"] }

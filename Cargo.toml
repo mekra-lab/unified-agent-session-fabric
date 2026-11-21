@@ -1,0 +1,6 @@
+[workspace]
+members = ["crates/uasf-queue", "crates/uasf-page-probe", "crates/uasf-index-probe", "crates/uasf-feeder", "crates/uasf-json", "crates/uasf-core", "crates/uasf-gate", "crates/uasf-staging", "crates/uasf-del", "crates/uasf-intake"]
+resolver = "2"
+
+[workspace.package]
+license = "Apache-2.0"

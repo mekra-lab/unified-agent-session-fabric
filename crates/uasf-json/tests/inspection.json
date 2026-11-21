@@ -1,0 +1,112 @@
+[
+  {
+    "name": "marker",
+    "input": "{\"$serde_json::private::Number\":\"\\u0031\\u0032\\u0033\\u0034\\u0035\"}\n",
+    "selector": {
+      "kind": "text",
+      "text": "12345"
+    },
+    "decode_ok": true
+  },
+  {
+    "name": "escaped_key",
+    "input": "{\"\\u0024serde_json::private::Number\":\"\\u0031\\u0032\\u0033\\u0034\\u0035\"}\n",
+    "selector": {
+      "kind": "text",
+      "text": "12345"
+    },
+    "decode_ok": true
+  },
+  {
+    "name": "nested_marker",
+    "input": "{\"nested\":[{\"$serde_json::private::Number\":\"\\u0031\\u0032\\u0033\\u0034\\u0035\"}]}\n",
+    "selector": {
+      "kind": "text",
+      "text": "12345"
+    },
+    "decode_ok": true
+  },
+  {
+    "name": "extra_key",
+    "input": "{\"$serde_json::private::Number\":\"\\u0031\\u0032\\u0033\\u0034\\u0035\",\"extra\":true}\n",
+    "selector": {
+      "kind": "text",
+      "text": "12345"
+    },
+    "decode_ok": true
+  },
+  {
+    "name": "overflow",
+    "input": "{\"v\":\"\\u0065rased\",\"n\":1e9999}\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "negative_overflow",
+    "input": "{\"v\":\"\\u0065rased\",\"n\":-1e9999}\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "nan",
+    "input": "{\"v\":\"\\u0065rased\",\"n\":NaN}\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "infinity",
+    "input": "{\"v\":\"\\u0065rased\",\"n\":Infinity}\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "deep_array",
+    "input": "[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[\"\\u0065rased\"]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "deep_object",
+    "input": "{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":{\"x\":\"\\u0065rased\"}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n",
+    "selector": {
+      "kind": "text",
+      "text": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "session_deep",
+    "input": "{\"sessionId\":\"\\u0065rased\",\"extra\":[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}\n",
+    "selector": {
+      "kind": "session",
+      "source": "s",
+      "session": "erased"
+    },
+    "decode_ok": false
+  },
+  {
+    "name": "session_overflow",
+    "input": "{\"extra\":1e9999,\"sessionId\":\"\\u0065rased\"}\n",
+    "selector": {
+      "kind": "session",
+      "source": "s",
+      "session": "erased"
+    },
+    "decode_ok": false
+  }
+]

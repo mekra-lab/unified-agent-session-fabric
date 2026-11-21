@@ -1,0 +1,15 @@
+[package]
+name = "uasf-core"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+uasf-queue = { path = "../uasf-queue" }
+serde = { version = "=1.0.229", features = ["derive"] }
+uasf-json = { path = "../uasf-json" }
+sha2 = "=0.10.9"
+rusqlite = { version = "=0.40.2", features = ["bundled"] }
+thiserror = "=2.0.21"
+libc = "=0.2.191"

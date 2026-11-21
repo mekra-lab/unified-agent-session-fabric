@@ -1,0 +1,10 @@
+[package]
+name = "uasf-json"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+serde = "=1.0.229"
+serde_json = { version = "=1.0.154", features = ["preserve_order", "float_roundtrip", "arbitrary_precision", "raw_value"] }

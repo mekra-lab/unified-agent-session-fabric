@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "handoff-receipts"
+version = "0.3.0"
+license = "Apache-2.0"
+description = "Local evidence receipts for Codex, Claude, and experimental Antigravity dispatches"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+handoff-receipts = "handoff_receipts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+handoff_receipts = ["INTERPRETATION.md"]

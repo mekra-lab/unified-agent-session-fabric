@@ -1,0 +1,70 @@
+# Minimal CI: synthetic Rust tests and the handoff-receipts test suite and install.
+# Native agent sessions, separate-user deployments and operational end-to-end paths
+# are outside this workflow; see docs/README.md for what each component has verified.
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Rust 1.99.1
+        run: |
+          rustup toolchain install 1.99.1 --profile minimal
+          rustup default 1.99.1
+          rustc --version
+          cargo --version
+      - name: Fetch locked dependencies
+        run: cargo fetch --locked
+      - name: Test (synthetic data)
+        run: |
+          # uasf-gate refuses group- or world-writable ancestors (a root-owned sticky
+          # /tmp is accepted), so use a fresh 0700 directory under /tmp.
+          export TMPDIR="$(mktemp -d /tmp/uasf-test.XXXXXX)"
+          cargo test --offline --locked
+
+  handoff-receipts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.14"]
+    defaults:
+      run:
+        working-directory: tools/handoff-receipts
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test (includes Unix socket tests; skips are not counted as passes)
+        run: |
+          python --version
+          export TMPDIR="$(mktemp -d /tmp/hr-test.XXXXXX)"
+          PYTHONPATH=src python -m unittest discover -s tests -v 2>&1 | tee "$RUNNER_TEMP/unittest.log"
+          # The summary line is "OK" only when nothing was skipped or expected to fail.
+          last="$(tail -n 1 "$RUNNER_TEMP/unittest.log")"
+          if [ "$last" != "OK" ]; then
+            echo "::error::unittest summary is '$last', not a plain OK" >&2
+            exit 1
+          fi
+      - name: Install and run the CLI
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/python" -m pip install --no-cache-dir .
+          "$RUNNER_TEMP/venv/bin/handoff-receipts" --version
+          "$RUNNER_TEMP/venv/bin/handoff-receipts" --help

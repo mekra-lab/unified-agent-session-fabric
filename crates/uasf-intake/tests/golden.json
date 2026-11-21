@@ -1,0 +1,1576 @@
+[
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-1",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-1",
+        "key": "fixed",
+        "deduplication": "keyed",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": true,
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "fixed",
+        "kind": "record",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-1",
+        "received_ns": "$time-receipt-1",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "source": "A",
+        "stream": null,
+        "version": 1
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "Y2hhbmdlZA=="
+    },
+    "response": {
+      "status": "conflict",
+      "receipt_id": "$receipt-1"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "different",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "conflict",
+      "receipt_id": "$receipt-1"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9",
+      "representation": "sdk_json"
+    },
+    "response": {
+      "status": "conflict",
+      "receipt_id": "$receipt-1"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "op": "get",
+      "source": "A",
+      "receipt_id": "$receipt-1"
+    },
+    "response": {
+      "status": "ok",
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "fixed",
+        "kind": "record",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-1",
+        "received_ns": "$time-receipt-1",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "source": "A",
+        "stream": null,
+        "version": 1
+      },
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "get",
+      "source": "B",
+      "receipt_id": "$receipt-1"
+    },
+    "response": {
+      "status": "not_found"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "B",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-2",
+        "source": "B",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-2",
+        "key": "fixed",
+        "deduplication": "keyed",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "unknown",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "forbidden"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": null,
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-3",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-3",
+        "key": null,
+        "deduplication": "unknown",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": null,
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-4",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-4",
+        "key": null,
+        "deduplication": "unknown",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "binary",
+      "payload_base64": "/wANCg=="
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-5",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-5",
+        "key": "binary",
+        "deduplication": "keyed",
+        "payload_length": 4,
+        "payload_sha256": "6375a1044d294c4efc761ce86b9c48d451d11bcf9ef4b586f56d833edb18f6da",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "get",
+      "source": "A",
+      "receipt_id": "$receipt-5"
+    },
+    "response": {
+      "status": "ok",
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "binary",
+        "kind": "record",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 4,
+        "payload_sha256": "6375a1044d294c4efc761ce86b9c48d451d11bcf9ef4b586f56d833edb18f6da",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-5",
+        "received_ns": "$time-receipt-5",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "source": "A",
+        "stream": null,
+        "version": 1
+      },
+      "payload_base64": "/wANCg=="
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "unicode",
+      "payload_base64": "c3ludGhldGljIGNhZsOpIPCfmIA=",
+      "representation": "sdk_json"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-6",
+        "source": "A",
+        "kind": "record",
+        "representation": "sdk_json",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-6",
+        "key": "unicode",
+        "deduplication": "keyed",
+        "payload_length": 20,
+        "payload_sha256": "36cd157290b07dc78996e8c4fe55ec54b4e75b30777fd9bd54babea55fdaf135",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "open"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": null,
+      "contiguous": true,
+      "chunks": [],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "c0",
+      "payload_base64": "YQ==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-7",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "stream": "open",
+        "received_ns": "$time-receipt-7",
+        "key": "c0",
+        "deduplication": "keyed",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "c0",
+      "payload_base64": "YQ==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": true,
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "c0",
+        "kind": "chunk",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-7",
+        "received_ns": "$time-receipt-7",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "source": "A",
+        "stream": "open",
+        "version": 1
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "c0",
+      "payload_base64": "Yg==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "conflict",
+      "receipt_id": "$receipt-7"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "other",
+      "payload_base64": "YQ==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "sequence_conflict"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "open"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": null,
+      "contiguous": true,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "c0",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-7",
+          "received_ns": "$time-receipt-7",
+          "representation": "app_bytes",
+          "sequence": 0,
+          "session": "s",
+          "source": "A",
+          "stream": "open",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "c1",
+      "payload_base64": "cGFydGlhbA==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 1
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-8",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 1,
+        "session": "s",
+        "stream": "open",
+        "received_ns": "$time-receipt-8",
+        "key": "c1",
+        "deduplication": "keyed",
+        "payload_length": 7,
+        "payload_sha256": "9834a14ab9bcaa0f6a8da71073617eac8f004e596a3fa11d807b84631b825d9d",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "end",
+      "payload_base64": "",
+      "stream": "open",
+      "kind": "complete",
+      "sequence": null
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-9",
+        "source": "A",
+        "kind": "complete",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": "open",
+        "received_ns": "$time-receipt-9",
+        "key": "end",
+        "deduplication": "keyed",
+        "payload_length": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "open"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "complete",
+      "terminal": "complete",
+      "contiguous": true,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "c0",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-7",
+          "received_ns": "$time-receipt-7",
+          "representation": "app_bytes",
+          "sequence": 0,
+          "session": "s",
+          "source": "A",
+          "stream": "open",
+          "version": 1
+        },
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "c1",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 7,
+          "payload_sha256": "9834a14ab9bcaa0f6a8da71073617eac8f004e596a3fa11d807b84631b825d9d",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-8",
+          "received_ns": "$time-receipt-8",
+          "representation": "app_bytes",
+          "sequence": 1,
+          "session": "s",
+          "source": "A",
+          "stream": "open",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "late",
+      "payload_base64": "Yw==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 2
+    },
+    "response": {
+      "status": "stream_closed"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "c0",
+      "payload_base64": "YQ==",
+      "stream": "open",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": true,
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "c0",
+        "kind": "chunk",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-7",
+        "received_ns": "$time-receipt-7",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "source": "A",
+        "stream": "open",
+        "version": 1
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "gap1",
+      "payload_base64": "Yg==",
+      "stream": "gap",
+      "kind": "chunk",
+      "sequence": 1
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-10",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 1,
+        "session": "s",
+        "stream": "gap",
+        "received_ns": "$time-receipt-10",
+        "key": "gap1",
+        "deduplication": "keyed",
+        "payload_length": 1,
+        "payload_sha256": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "gap-end",
+      "payload_base64": "",
+      "stream": "gap",
+      "kind": "complete",
+      "sequence": null
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-11",
+        "source": "A",
+        "kind": "complete",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": "gap",
+        "received_ns": "$time-receipt-11",
+        "key": "gap-end",
+        "deduplication": "keyed",
+        "payload_length": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "gap"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": "complete",
+      "contiguous": false,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "gap1",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-10",
+          "received_ns": "$time-receipt-10",
+          "representation": "app_bytes",
+          "sequence": 1,
+          "session": "s",
+          "source": "A",
+          "stream": "gap",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": null,
+      "payload_base64": "YQ==",
+      "stream": "dupes",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-12",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "stream": "dupes",
+        "received_ns": "$time-receipt-12",
+        "key": null,
+        "deduplication": "unknown",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": null,
+      "payload_base64": "YQ==",
+      "stream": "dupes",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-13",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "stream": "dupes",
+        "received_ns": "$time-receipt-13",
+        "key": null,
+        "deduplication": "unknown",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "dupe-end",
+      "payload_base64": "",
+      "stream": "dupes",
+      "kind": "complete",
+      "sequence": null
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-14",
+        "source": "A",
+        "kind": "complete",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": "dupes",
+        "received_ns": "$time-receipt-14",
+        "key": "dupe-end",
+        "deduplication": "keyed",
+        "payload_length": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "dupes"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": "complete",
+      "contiguous": false,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "unknown",
+          "durability": "sqlite-full-commit",
+          "key": null,
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-12",
+          "received_ns": "$time-receipt-12",
+          "representation": "app_bytes",
+          "sequence": 0,
+          "session": "s",
+          "source": "A",
+          "stream": "dupes",
+          "version": 1
+        },
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "unknown",
+          "durability": "sqlite-full-commit",
+          "key": null,
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-13",
+          "received_ns": "$time-receipt-13",
+          "representation": "app_bytes",
+          "sequence": 0,
+          "session": "s",
+          "source": "A",
+          "stream": "dupes",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "int0",
+      "payload_base64": "cGFydGlhbA==",
+      "stream": "interrupted",
+      "kind": "chunk",
+      "sequence": 0
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-15",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 0,
+        "session": "s",
+        "stream": "interrupted",
+        "received_ns": "$time-receipt-15",
+        "key": "int0",
+        "deduplication": "keyed",
+        "payload_length": 7,
+        "payload_sha256": "9834a14ab9bcaa0f6a8da71073617eac8f004e596a3fa11d807b84631b825d9d",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "int-end",
+      "payload_base64": "",
+      "stream": "interrupted",
+      "kind": "interrupted",
+      "sequence": null
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-16",
+        "source": "A",
+        "kind": "interrupted",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": "interrupted",
+        "received_ns": "$time-receipt-16",
+        "key": "int-end",
+        "deduplication": "keyed",
+        "payload_length": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "interrupted"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": "interrupted",
+      "contiguous": true,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "int0",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 7,
+          "payload_sha256": "9834a14ab9bcaa0f6a8da71073617eac8f004e596a3fa11d807b84631b825d9d",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-15",
+          "received_ns": "$time-receipt-15",
+          "representation": "app_bytes",
+          "sequence": 0,
+          "session": "s",
+          "source": "A",
+          "stream": "interrupted",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "int-late",
+      "payload_base64": "bGF0ZQ==",
+      "stream": "interrupted",
+      "kind": "chunk",
+      "sequence": 1
+    },
+    "response": {
+      "status": "stream_closed"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "op": "erase",
+      "receipt_ids": [
+        "$receipt-1",
+        "missing"
+      ]
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "erase",
+      "receipt_ids": [
+        "$receipt-1"
+      ]
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "get",
+      "source": "A",
+      "receipt_id": "$receipt-1"
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "bmV3"
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "B",
+      "session": "s",
+      "key": "fixed",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": true,
+      "receipt": {
+        "conversation_completeness": "unknown",
+        "deduplication": "keyed",
+        "durability": "sqlite-full-commit",
+        "key": "fixed",
+        "kind": "record",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "observation_basis": "app_submission",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "receipt_id": "$receipt-2",
+        "received_ns": "$time-receipt-2",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "source": "B",
+        "stream": null,
+        "version": 1
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "new-after-single-delete",
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-17",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-17",
+        "key": "new-after-single-delete",
+        "deduplication": "keyed",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "erase",
+      "receipt_ids": [
+        "$receipt-3",
+        "$receipt-4"
+      ]
+    },
+    "response": {
+      "status": "deleted"
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": null,
+      "payload_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-18",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-18",
+        "key": null,
+        "deduplication": "unknown",
+        "payload_length": 18,
+        "payload_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "get",
+      "source": "A",
+      "receipt_id": "unknown"
+    },
+    "response": {
+      "status": "not_found"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "op": "unknown"
+    },
+    "response": {
+      "status": "unsupported"
+    },
+    "exit_code": 2
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "padding-bits",
+      "payload_base64": "Zh=="
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-19",
+        "source": "A",
+        "kind": "record",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": null,
+        "received_ns": "$time-receipt-19",
+        "key": "padding-bits",
+        "deduplication": "keyed",
+        "payload_length": 1,
+        "payload_sha256": "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "huge-sequence",
+      "payload_base64": "YQ==",
+      "stream": "huge",
+      "kind": "chunk",
+      "sequence": 1208925819614629174706176
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-20",
+        "source": "A",
+        "kind": "chunk",
+        "representation": "app_bytes",
+        "sequence": 1208925819614629174706176,
+        "session": "s",
+        "stream": "huge",
+        "received_ns": "$time-receipt-20",
+        "key": "huge-sequence",
+        "deduplication": "keyed",
+        "payload_length": 1,
+        "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "source": "A",
+      "session": "s",
+      "key": "huge-end",
+      "payload_base64": "",
+      "stream": "huge",
+      "kind": "complete",
+      "sequence": null
+    },
+    "response": {
+      "status": "accepted",
+      "replayed": false,
+      "receipt": {
+        "version": 1,
+        "receipt_id": "$receipt-21",
+        "source": "A",
+        "kind": "complete",
+        "representation": "app_bytes",
+        "sequence": null,
+        "session": "s",
+        "stream": "huge",
+        "received_ns": "$time-receipt-21",
+        "key": "huge-end",
+        "deduplication": "keyed",
+        "payload_length": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_reference": {
+          "owner": "uasf-intake",
+          "table": "observation"
+        },
+        "observation_basis": "app_submission",
+        "conversation_completeness": "unknown",
+        "model_input_completeness": "unknown",
+        "normalization": "unsupported",
+        "durability": "sqlite-full-commit"
+      }
+    },
+    "exit_code": 0
+  },
+  {
+    "request": {
+      "op": "stream_state",
+      "source": "A",
+      "session": "s",
+      "stream": "huge"
+    },
+    "response": {
+      "status": "ok",
+      "stream_state": "incomplete",
+      "terminal": "complete",
+      "contiguous": false,
+      "chunks": [
+        {
+          "conversation_completeness": "unknown",
+          "deduplication": "keyed",
+          "durability": "sqlite-full-commit",
+          "key": "huge-sequence",
+          "kind": "chunk",
+          "model_input_completeness": "unknown",
+          "normalization": "unsupported",
+          "observation_basis": "app_submission",
+          "payload_length": 1,
+          "payload_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+          "raw_reference": {
+            "owner": "uasf-intake",
+            "table": "observation"
+          },
+          "receipt_id": "$receipt-20",
+          "received_ns": "$time-receipt-20",
+          "representation": "app_bytes",
+          "sequence": 1208925819614629174706176,
+          "session": "s",
+          "source": "A",
+          "stream": "huge",
+          "version": 1
+        }
+      ],
+      "conversation_completeness": "unknown"
+    },
+    "exit_code": 0
+  }
+]

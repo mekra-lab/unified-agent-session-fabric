@@ -1,0 +1,12 @@
+[package]
+name = "uasf-feeder"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+
+[dependencies]
+uasf-json = { path = "../uasf-json" }
+uasf-staging = { path = "../uasf-staging" }
+sha2 = "=0.10.9"
+libc = "=0.2.191"

@@ -1,0 +1,293 @@
+{
+  "schema": "uasf-staging.inspection/1",
+  "cases": [
+    {
+      "name": "text_overflow",
+      "input": "{\"v\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_negative_overflow",
+      "input": "{\"v\":\"\\u0065rased\",\"n\":-1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_nan",
+      "input": "{\"v\":\"\\u0065rased\",\"n\":NaN}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_infinity",
+      "input": "{\"v\":\"\\u0065rased\",\"n\":Infinity}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_escaped_key",
+      "input": "{\"\\u0065rased\":0,\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_deep_array",
+      "input": "[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[\"\\u0065rased\"]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_deep_object",
+      "input": "{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":{\"v\":\"\\u0065rased\"}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_jsonl_unknown",
+      "input": "{}\n{\"v\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_cr_unknown",
+      "input": "{}\r{\"v\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_deep_after",
+      "input": "{\"sessionId\":\"\\u0065rased\",\"extra\":[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_deep_before",
+      "input": "{\"extra\":[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]],\"sessionId\":\"\\u0065rased\"}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_codex_deep",
+      "input": "{\"type\":\"session_meta\",\"payload\":{\"id\":\"\\u0065rased\"},\"extra\":[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_overflow",
+      "input": "{\"sessionId\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_jsonl_unknown",
+      "input": "{}\n{\"sessionId\":\"\\u0065rased\",\"extra\":[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_truncated",
+      "input": "{\"v\":\"\\u0065rased\"\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_truncated",
+      "input": "{\"sessionId\":\"\\u0065rased\"\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_unrelated_overflow",
+      "input": "{\"v\":\"safe\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "session_unrelated_overflow",
+      "input": "{\"sessionId\":\"safe\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_partial_tail",
+      "input": "{}\n{\"v\":\"\\u0065rased",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "not_captured"
+    },
+    {
+      "name": "text_valid_unmatched",
+      "input": "{}\n \r\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "published"
+    },
+    {
+      "name": "session_valid_unmatched",
+      "input": "{\"sessionId\":\"safe\"}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "published"
+    },
+    {
+      "name": "text_raw_match_invalid",
+      "input": "{\"v\":\"erased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "deleted"
+    },
+    {
+      "name": "text_decoded_match",
+      "input": "{\"v\":\"\\u0065rased\"}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "deleted"
+    },
+    {
+      "name": "session_decoded_match",
+      "input": "{\"sessionId\":\"\\u0065rased\"}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "deleted"
+    },
+    {
+      "name": "other_source_invalid",
+      "input": "{\"sessionId\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": {
+        "kind": "session",
+        "source": "other",
+        "session": "erased"
+      },
+      "python_status": "published",
+      "rust_status": "published"
+    },
+    {
+      "name": "unbound_invalid",
+      "input": "{\"v\":\"\\u0065rased\",\"n\":1e9999}\n",
+      "selector": null,
+      "python_status": "published",
+      "rust_status": "published"
+    },
+    {
+      "name": "session_match_after_unknown",
+      "input": "bad\n{\"sessionId\":\"\\u0065rased\"}\n",
+      "selector": {
+        "kind": "session",
+        "source": "s",
+        "session": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "deleted"
+    },
+    {
+      "name": "text_match_after_unknown",
+      "input": "bad\n{\"v\":\"\\u0065rased\"}\n",
+      "selector": {
+        "kind": "text",
+        "text": "erased"
+      },
+      "python_status": "deleted",
+      "rust_status": "deleted"
+    }
+  ]
+}
